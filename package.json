@@ -5,6 +5,7 @@
   "main": "webhook.js",
   "scripts": {
     "deploy": "pm2 start webhook.js",
+    "red": "pm2 restart webhook.js",
     "start": "pm2 start ./server",
     "re": "pm2 restart ./server"
   },

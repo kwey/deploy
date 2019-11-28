@@ -11,11 +11,13 @@ git reset --hard origin/master
 npm i
 npm run build:mac
 
-mv ./dist $DEP_PATH/next
+mkdir -p $DEP_PATH/next
+mv ./dist/* $DEP_PATH/next
 
 cd $DEP_PATH
-mv ./dist ./pre
-mv ./next ./dist
+rm -rf ./pre
+mv -f ./dist ./pre
+mv -f ./next ./dist
 rm -rf ./next/*
 
 npm run re
